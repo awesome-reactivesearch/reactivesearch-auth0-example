@@ -6,6 +6,7 @@ body {
 
 .container {
   display: flex;
+  padding-top: 1em;
   justify-content: center;
   align-items: center;
 }
