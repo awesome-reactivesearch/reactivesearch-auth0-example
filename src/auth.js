@@ -7,7 +7,7 @@ export default class Auth {
   auth0 = new auth0.WebAuth({
     domain: 'divyanshu.auth0.com',
     clientID: 'TJyKPI6aRiRwgr6SxlT7ExW10NEHW4Vy',
-    redirectUri: 'http://localhost:3000/callback',
+    redirectUri: process.env.NODE_ENV === 'development' ? 'http://localhost:3000/callback' : 'https://appbaseio-apps.github.io/reactivesearch-auth0-example/callback',
     audience: 'https://divyanshu.auth0.com/userinfo',
     responseType: 'token id_token',
     scope: 'openid'
